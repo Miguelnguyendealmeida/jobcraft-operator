@@ -36,7 +36,8 @@ export default function Dashboard() {
     fetchSavedLetters()
   }, [])
 
-  const generateLetter = async (job: any) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+const generateLetter = async (job: any) => {
     setGenerating(true)
     const response = await fetch('/api/letter/generate', {
       method: 'POST',

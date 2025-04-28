@@ -6,7 +6,8 @@ import { supabase } from '@/lib/supabaseClient'
 export default function UploadCV() {
   const [file, setFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
-  const [parsedData, setParsedData] = useState<any>(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+const [parsedData, setParsedData] = useState<any>(null)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0]
