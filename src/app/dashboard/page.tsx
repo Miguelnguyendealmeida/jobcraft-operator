@@ -8,7 +8,6 @@ import { toast } from 'react-toastify'
 export default function Dashboard() {
   const [jobs, setJobs] = useState([])
   const [loading, setLoading] = useState(true)
-  const [savedLetters, setSavedLetters] = useState([])
   const [generating, setGenerating] = useState(false)
 
   useEffect(() => {

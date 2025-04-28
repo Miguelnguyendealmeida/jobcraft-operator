@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  const openai = new OpenAIApi(new Configuration({ apiKey: process.env.OPENAI_API_KEY }))
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
   const coverLetterResponse = await openai.createChatCompletion({
     model: 'gpt-4o',

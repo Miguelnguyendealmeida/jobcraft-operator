@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   const fileText = await file.text()
 
   // Initialize OpenAI API
-  const openai = new OpenAIApi(new Configuration({ apiKey: process.env.OPENAI_API_KEY }))
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
   // Parse the CV
   const parsedData = await openai.createChatCompletion({
