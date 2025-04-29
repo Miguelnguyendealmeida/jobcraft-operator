@@ -38,6 +38,8 @@ export default function Dashboard() {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const generateLetter = async (job: any) => {
     setGenerating(true)
     const response = await fetch('/api/letter/generate', {
