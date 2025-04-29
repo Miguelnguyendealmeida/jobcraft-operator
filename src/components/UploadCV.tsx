@@ -7,6 +7,7 @@ export default function UploadCV() {
   const [file, setFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const [parsedData, setParsedData] = useState<any>(null)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
