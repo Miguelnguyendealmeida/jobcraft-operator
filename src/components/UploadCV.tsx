@@ -13,7 +13,8 @@ export default function UploadCV() {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const [parsedData, setParsedData] = useState<any>(null)
+const [parsedData, setParsedData] = // eslint-disable-next-line @typescript-eslint/no-explicit-any
+useState<any>(null)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0]
@@ -26,7 +27,6 @@ const [parsedData, setParsedData] = useState<any>(null)
     if (!file) return
 
     setUploading(true)
-    const { data, error } = await supabase.storage
       .from('cv')
       .upload(`public/${file.name}`, file, {
         cacheControl: '3600',
